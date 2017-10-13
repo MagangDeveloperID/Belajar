@@ -1,7 +1,12 @@
 <?php
-
+/*
+* membuat kelas buku
+*/
 class buku
 {
+	/*
+	* mendeklarasikan variabel
+	*/
 	var $nama;
 	var $warna;
 	var $merk;
@@ -24,6 +29,10 @@ class buku
 	{
 		$this->harga = $harga;
 	}
+
+	/*
+	* perintah fungsi
+	*/
 	function __construct ($warna,$merk)
 	{
 		$this->nama = $nama;
