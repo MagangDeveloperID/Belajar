@@ -7,40 +7,41 @@ class buku
 	/*
 	* mendeklarasikan variabel
 	*/
-	var $nama;
+	
 	var $warna;
 	var $merk;
 	var $harga;
-
-	public function setNama($nama)
+	
+	function statusHarga()
 	{
-		$this->nama= $nama;
-	}	
+		if ($this->harga > 5000) $status = 'Mahal';
+		else $status = 'Murah';
+		return $status;
+	} 
 
-	public function setWarna( $warna)
+		
+
+	function setWarna( $warna)
 	{
 		$this->warna = $warna;
 	}
-	public function setMerk( $merk)
+	function setMerk( $merk)
 	{
 		$this->merk = $merk;
 	}
-	public function setHarga($harga)
+	function setHarga($harga)
 	{
 		$this->harga = $harga;
-	}
-
-	/*
-	* perintah fungsi
-	*/
-	function __construct ($warna,$merk)
-	{
-		$this->nama = $nama;
-		$this->warna = $warna;
-		$this->merk = $merk;
-		$this->harga = $harga;
-
 	}
 }
+
+	/*
+	* output dari perintah
+	*/
+	$buku1 = new buku();
+	$buku1->setMerk(’Sidu’);
+	$buku1->setHarga(3000);
+	echo $buku1->statusHarga();
+	
 
 ?>
